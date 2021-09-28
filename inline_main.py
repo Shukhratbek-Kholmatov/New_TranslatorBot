@@ -4,7 +4,7 @@ from datetime import datetime
 from inline_button_maker import make_button
 from admin_panel import admin_button, button_photo
 from translate_function import translate
-token="1782655438:AAF6Wztcp5pegHYQlIp5ai6hjRhT9qcjEtg"
+from config import token
 bot=telebot.TeleBot(token,parse_mode="MARKDOWN")
 admin="904185120"
 #start_command
