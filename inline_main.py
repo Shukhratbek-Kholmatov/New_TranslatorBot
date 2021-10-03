@@ -6,7 +6,6 @@ from admin_panel import admin_button, button_photo
 from translate_function import translate
 from config import token
 bot=telebot.TeleBot(token,parse_mode="MARKDOWN")
-admin="904185120"
 #start_command
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -15,7 +14,6 @@ def start(message):
     hozir=datetime.now().strftime('%Y-%m-%d %H:%M')
     user=message.from_user
     bot.send_message(message.chat.id,f"*🇺🇿Assalomu alaykum {format(user.first_name)}.\nTarjima uchun matn yuboring va kerakli tilni tanlang.Siz yuborgan matn shu tilga tarjima qilinadi▼\nBot buyruqlari👉/commands*",reply_markup=main_button)
-    bot.send_message(admin,f"*/start bosildi.\n👤Foydalanuvchi:{format(user.first_name)}\n👤 Useri:\n@{format(user.username)}\n🆔 Foydalanuvchi id raqami:\n{message.chat.id}*")
 #commands_command
 @bot.message_handler(commands=['commands'])
 def commands(message):
